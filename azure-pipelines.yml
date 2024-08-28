@@ -19,7 +19,7 @@ steps:
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/robanstee/pipelines-java/main/pipelines-java-tutorial-webapp/template.json'
     csmParametersFileLink: 'https://raw.githubusercontent.com/robanstee/pipelines-java/main/pipelines-java-tutorial-webapp/parameters.json'
-    deploymentMode: 'Complete'
+    deploymentMode: 'Incremental'
 
 - task: Maven@3
   inputs:
