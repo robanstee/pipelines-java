@@ -10,10 +10,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'Azure subscription 1(1e0ab535-a9e6-41d3-bede-c3b737c9232c)'
+    azureResourceManagerConnection: 'ARM Service Connection'
     subscriptionId: '1e0ab535-a9e6-41d3-bede-c3b737c9232c'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'JavaTest-Lab'
