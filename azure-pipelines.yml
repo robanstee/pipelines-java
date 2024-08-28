@@ -12,7 +12,7 @@ pool:
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    deploymentScope: 'Subscription'
+    deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'Free Trial(1e0ab535-a9e6-41d3-bede-c3b737c9232c)'
     subscriptionId: '1e0ab535-a9e6-41d3-bede-c3b737c9232c'
     location: 'Central US'
