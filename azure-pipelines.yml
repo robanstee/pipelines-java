@@ -13,8 +13,8 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'Free Trial(1e0ab535-a9e6-41d3-bede-c3b737c9232c)'
-    subscriptionId: '1e0ab535-a9e6-41d3-bede-c3b737c9232c'
+    azureResourceManagerConnection: 'pipelines-java-tutorial-service'
+    subscriptionId: 'Free Trial(1e0ab535-a9e6-41d3-bede-c3b737c9232c)'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'JavaTest-Lab'
     location: 'Central US'
@@ -36,7 +36,6 @@ steps:
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Free Trial(1e0ab535-a9e6-41d3-bede-c3b737c9232c)'
-    appType: 'webApp'
+    appType: 'webAppLinux'
     appName: 'pipelines-java-tutorial'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    deploymentMethod: 'auto'
