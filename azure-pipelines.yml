@@ -20,3 +20,10 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Free Trial(1e0ab535-a9e6-41d3-bede-c3b737c9232c)'
+    appType: 'webApp'
+    appName: 'pipelines-java-tutorial'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
