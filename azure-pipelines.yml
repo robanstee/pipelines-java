@@ -14,7 +14,7 @@ steps:
   inputs:
     deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'pipelines-java-tutorial-service'
-    subscriptionId: 'Free Trial(1e0ab535-a9e6-41d3-bede-c3b737c9232c)'
+    subscriptionId: '1e0ab535-a9e6-41d3-bede-c3b737c9232c'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'JavaTest-Lab'
     location: 'Central US'
@@ -22,6 +22,7 @@ steps:
     csmFileLink: 'https://raw.githubusercontent.com/robanstee/pipelines-java/main/pipelines-java-tutorial-webapp/template.json'
     csmParametersFileLink: 'https://raw.githubusercontent.com/robanstee/pipelines-java/main/pipelines-java-tutorial-webapp/parameters.json'
     deploymentMode: 'Incremental'
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
